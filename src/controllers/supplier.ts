@@ -6,8 +6,22 @@ const prisma = new PrismaClient()
 
 export async function getSuppliers(req: Request, res: Response) {
   try {
+    const monthlyUsage = Number(req.query?.monthlyUsage ?? 0)
+
+    if (isNaN(monthlyUsage) || monthlyUsage <= 0) {
+      res.status(400).json({ error: 'Invalid monthly usage' })
+      return
+    }
+
     const suppliers = await prisma.supplier.findMany()
-    res.json(suppliers)
+    const mappedSuppliers = suppliers.map(supplier => (
+      {
+        ...supplier,
+        couldServe: supplier.minimumKwhUsage <= monthlyUsage,
+      }
+    ))
+
+    res.json(mappedSuppliers)
   } catch (e) {
     res.status(500).json({ error: 'Failed to fetch suppliers' })
   }
