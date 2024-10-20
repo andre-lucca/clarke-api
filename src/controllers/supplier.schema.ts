@@ -10,4 +10,4 @@ export const supplierSchema = z.object({
   averageCustomersRating: z.number().min(1).max(10),
 })
 
-export type SupplierSchema = z.infer<typeof supplierSchema>
+export type SupplierSchema = Required<z.infer<typeof supplierSchema>>
