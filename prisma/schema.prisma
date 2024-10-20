@@ -18,7 +18,7 @@ model Supplier {
   name                   String
   logo                   String
   originState            String
-  costPerKwh             Int
+  costPerKwh             Float
   minimumKwhUsage        Int
   totalCustomers         Int
   averageCustomersRating Float
