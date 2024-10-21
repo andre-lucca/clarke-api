@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "tsx --watch src",
     "seed": "tsx prisma/seed.ts",
+    "build": "npx tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
