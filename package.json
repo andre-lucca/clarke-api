@@ -2,7 +2,8 @@
   "name": "clarke-api",
   "version": "1.0.0",
   "description": "Desafio de Backend - Clarke Energia",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "type": "commonjs",
   "scripts": {
     "dev": "tsx --watch src",
     "seed": "tsx prisma/seed.ts",
