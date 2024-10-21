@@ -7,8 +7,10 @@
   "scripts": {
     "dev": "tsx --watch src",
     "seed": "tsx prisma/seed.ts",
-    "build": "npx tsc",
+    "build": "npx tsc && npm run prisma:prod && npm run seed:prod",
     "start": "node dist/src/index.js",
+    "seed:prod": "node dist/prisma/seed.js",
+    "prisma:prod": "npx prisma generate && npx prisma migrate deploy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
