@@ -8,7 +8,7 @@ const suppliers = [
     logo: "https://logospng.org/download/eletrobras/logo-eletrobras-2048.png",
     originState: "RJ",
     costPerKwh: 0.30,
-    minimumKwhUsage: 100,
+    minimumKwhUsage: 2000,
     totalCustomers: 9500,
     averageCustomersRating: 8.2
   },
@@ -17,7 +17,7 @@ const suppliers = [
     logo: "https://logospng.org/wp-content/uploads/neoenergia.png",
     originState: "BA",
     costPerKwh: 0.28,
-    minimumKwhUsage: 120,
+    minimumKwhUsage: 3500,
     totalCustomers: 8700,
     averageCustomersRating: 8.0
   },
@@ -26,7 +26,7 @@ const suppliers = [
     logo: "https://logospng.org/download/cpfl-energia/logo-cpfl-energia-2048.png",
     originState: "SP",
     costPerKwh: 0.29,
-    minimumKwhUsage: 110,
+    minimumKwhUsage: 23000,
     totalCustomers: 47000,
     averageCustomersRating: 8.5
   },
@@ -35,7 +35,7 @@ const suppliers = [
     logo: "https://logospng.org/download/grupo-light/light-4096.png",
     originState: "RJ",
     costPerKwh: 0.32,
-    minimumKwhUsage: 130,
+    minimumKwhUsage: 45000,
     totalCustomers: 4200,
     averageCustomersRating: 7.5
   },
@@ -44,7 +44,7 @@ const suppliers = [
     logo: "https://logospng.org/wp-content/uploads/grupo-energisa.png",
     originState: "MT",
     costPerKwh: 0.27,
-    minimumKwhUsage: 100,
+    minimumKwhUsage: 10000,
     totalCustomers: 48000,
     averageCustomersRating: 8.0
   }
