@@ -39,7 +39,7 @@ export async function createSupplier(req: Request, res: Response) {
 
     res.status(201).json(newSupplier)
   } catch (e) {
-    res.status(400).json(e)
+    res.status(500).json({ error: 'Failed to create supplier' })
   }
 }
 
@@ -56,7 +56,7 @@ export async function updateSupplier(req: Request, res: Response) {
 
     res.status(201).json(updatedSupplier)
   } catch (e) {
-    res.status(400).json(e)
+    res.status(500).json({ error: 'Failed to update supplier' })
   }
 }
 
