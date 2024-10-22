@@ -6,7 +6,7 @@ Esta é API de fornecedores de energia, sendo o Backend do projeto Full Stack do
 
 Para o Front End do projeto visite o [Github do Front End](https://github.com/andre-lucca/clarke-app)
 
-Link para o Deploy [aqui](https://clarke-api.onrender.com/suppliers)
+Link para o Deploy [aqui](https://clarke-api.onrender.com/suppliers?monthlyUsage=5000)
 
 ## Principais tecnologias usadas
  - Typescript
