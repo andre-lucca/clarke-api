@@ -11,7 +11,7 @@
     "start": "node dist/src/index.js",
     "seed:prod": "node dist/prisma/seed.js",
     "prisma:prod": "npx prisma generate && npx prisma migrate deploy",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
@@ -25,8 +25,11 @@
   },
   "devDependencies": {
     "@types/express": "^5.0.0",
+    "@types/jest": "^29.5.13",
     "@types/node": "^22.7.6",
+    "jest": "^29.7.0",
     "prisma": "^5.21.1",
+    "ts-jest": "^29.2.5",
     "tsx": "^4.19.1",
     "typescript": "^5.6.3"
   }

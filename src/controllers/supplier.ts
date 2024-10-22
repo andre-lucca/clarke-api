@@ -45,6 +45,10 @@ export async function createSupplier(req: Request, res: Response) {
 
 export async function updateSupplier(req: Request, res: Response) {
   try {
+    if (!req.params.id) {
+      res.status(400).json({ error: 'A supplier ID is required' })
+    }
+
     const supplier = supplierSchema.parse(req.body) as SupplierSchema
 
     const updatedSupplier = await prisma.supplier.update({
@@ -62,6 +66,10 @@ export async function updateSupplier(req: Request, res: Response) {
 
 export async function deleteSupplier(req: Request, res: Response) {
   try {
+    if (!req.params.id) {
+      res.status(400).json({ error: 'A supplier ID is required' })
+    }
+
     await prisma.supplier.delete({
       where: { id: req.params.id },
     })

@@ -1,8 +1,5 @@
 {
   "compilerOptions": {
-    "rootDirs": [
-      "src"
-    ],
     "outDir": "dist",
     "lib": [
       "es2020"
@@ -14,5 +11,8 @@
     "types": [
       "node"
     ],
-  }
+  },
+  "include": [
+    "src/**/*"
+  ]
 }
