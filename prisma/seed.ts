@@ -51,15 +51,22 @@ const suppliers = [
 ]
 
 async function main() {
-  try {
-    await prisma.supplier.createMany({
-      data: suppliers,
-      skipDuplicates: true,
-    })
-    console.log('Seed data inserted successfully')
-  } catch (error) {
-    console.error('Error inserting seed data:', error)
-  } finally {
+  const existingSuppliers = await prisma.supplier.findMany()
+
+  if (existingSuppliers.length === 0) {
+    try {
+      await prisma.supplier.createMany({
+        data: suppliers,
+        skipDuplicates: true,
+      })
+      console.log('Seed data inserted successfully')
+    } catch (error) {
+      console.error('Error inserting seed data:', error)
+    } finally {
+      await prisma.$disconnect()
+    }
+  } else {
+    console.log('Data already exists, skipping seed data insertion')
     await prisma.$disconnect()
   }
 }
