@@ -32,13 +32,19 @@ git clone git@github.com:andre-lucca/clarke-api.git
 npm i
 ```
 
-3. Crie os contêineres e execute o Docker
+3. Crie um .env com base no .env.example
+
+```bash
+cp .env.example ./.env
+```
+
+4. Crie os contêineres e execute o Docker
 
 ```bash
 docker compose up --build -d
 ```
 
-4. Insira alguns dados no banco
+5. Insira alguns dados no banco
 
 ```bash
 docker exec clarke-api-backend-1 npm run docker:seed
