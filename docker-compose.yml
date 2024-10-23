@@ -1,6 +1,7 @@
 services:
   backend:
     build: .
+    container_name: clarke-api-backend-1
     ports:
       - "3000:3000"
     environment:
