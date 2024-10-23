@@ -9,7 +9,7 @@
     "seed": "tsx prisma/seed.ts",
     "build": "npx tsc",
     "start": "node dist/index.js",
-    "prisma:prod": "npx prisma generate && npx prisma migrate deploy",
+    "prisma:prod": "npx prisma migrate deploy",
     "docker:seed": "npm run prisma:prod && npm run seed",
     "test": "jest"
   },

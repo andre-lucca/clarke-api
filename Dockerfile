@@ -2,11 +2,13 @@ FROM node:18
 
 WORKDIR /usr/src/api
 
-COPY package*.json ./
+COPY . .
 
 RUN npm install
 
-COPY . .
+COPY .env.example .env
+
+RUN npx prisma generate
 
 RUN npm run build
 

@@ -28,25 +28,13 @@ Link para o Deploy [aqui](https://clarke-api.onrender.com/suppliers?monthlyUsage
 git clone git@github.com:andre-lucca/clarke-api.git
 ```
 
-2. Instale as dependências
-
-```bash
-npm i
-```
-
-3. Crie um .env com base no .env.example
-
-```bash
-cp .env.example ./.env
-```
-
-4. Crie os contêineres e execute o Docker
+2. Crie os contêineres e execute o Docker
 
 ```bash
 docker compose up --build -d
 ```
 
-5. Insira alguns dados no banco
+3. Insira alguns dados no banco
 
 ```bash
 docker exec clarke-api-backend-1 npm run docker:seed

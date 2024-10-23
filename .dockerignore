@@ -9,12 +9,12 @@ logs
 .DS_Store
 Thumbs.db
 
-# Ignore environment variables
-.env
-
 # Ignore build directories
 dist
 build
+
+# Ignore env file
+.env
 
 # Ignore IDE specific files
 .vscode
